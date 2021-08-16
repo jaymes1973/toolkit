@@ -69,6 +69,7 @@ dfdef=dfdef.loc[(dfdef['Comp'] == league_choice)]
 
 
 teams = list(dfatt['Squad'].drop_duplicates())
+teams=sorted(teams)
 teams_choice = st.sidebar.multiselect(
     "Filter by Team:", teams, default=None)
 
